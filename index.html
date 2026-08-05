@@ -140,8 +140,8 @@
   <div id="menu-screen">
     <div class="header-block">
       <div class="eyebrow">Kula Revise &middot; Grade 12 History &middot; The Congo</div>
-      <h1 class="masthead">What Stuck</h1><div class="sub">After Lesson 5</div>
-      <div class="sub" id="masthead-sub">What stuck &middot; After the capstone</div>
+      <h1 class="masthead">What Stuck</h1>
+      <div class="sub" id="masthead-sub">After Lesson 5</div>
       <div class="rule"></div>
     </div>
     <div class="intro-box">
@@ -508,8 +508,8 @@ function priorScore(){
 
 // Intro copy differs by sitting.
 document.getElementById('intro-body').textContent = IS_AFTER
-  ? 'You have worked through the lessons and the capstone. This is the same set of facts as the check you took at the start, asked from the other side, so it measures what stuck. Every question tells you why the answer is right, so a wrong answer is still a chance to fix something before the exam.'
-  : 'This checks recall: the dates, names and policies the essay is built from. Take it before Lesson 1. A low score here is the normal starting point, not a warning, so do not worry about the number. Every question tells you why the answer is right. Write your score down at the end so you can compare it after the capstone.';
+  ? 'You have worked through all five lessons. This is the same set of facts as the check you took at the start, asked from the other side, so it measures what stuck. Every question tells you why the answer is right, so a wrong answer is still a chance to fix something before the exam.'
+  : 'This checks recall: the dates, names and policies the essay is built from. Take it before Lesson 1. A low score here is the normal starting point, not a warning, so do not worry about the number. Every question tells you why the answer is right. Write your score down at the end so you can compare it after Lesson 5.';
 
 const state = { filter: 'all', list: [], current: 0, answers: {}, order: {} };
 
@@ -670,7 +670,7 @@ function showReview(){
       cmp.classList.add('hidden');
     }
   } else {
-    cmp.textContent = 'Write this score down. When you finish the capstone, the second check will compare against it.';
+    cmp.textContent = 'Write this score down. When you finish Lesson 5, the second check will compare against it.';
     cmp.classList.remove('hidden');
   }
 
