@@ -3,31 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What Stuck | Independent Africa: the Congo | Kula Revise</title>
+<title>What You Know Already | Independent Africa: the Congo | Kula Revise</title>
 <style>
-  :root {
-    --sand: #F2F5F8; --paper: #FCFDFE; --cut: #FFFFFF; --ink: #17212B;
-    --a1: #2E6FB2;         /* copper, accent one: nav, emphasis, option letters, progress */
-    --a2: #255E90;         /* malachite, accent two: earned, correct, band, breakdown */
-    --copper: var(--a1); --malachite: var(--a2);   /* aliases so existing rules inherit the split */
-    --clay: #2E6FB2; --fade: #6C7681;
-    --ink-c:23,33,43; --a1-c:46,111,178; --a2-c:37,94,144;
-    --opt-correct-bg:#DCEAF7; --opt-wrong-bg:#ECEEF0;
-    --chip-recall-bg:#DEE8F3; --chip-recall-fg:#235C93;
-    --chip-understand-bg:#E4E8ED; --chip-understand-fg:#3A6280;
-    --btn-sub-c:#7A828C; --on-ink:#FFFFFF; --ink-hover:#0E1620; --a2-hover:#1E5080;
-    --serif: Georgia, 'Times New Roman', serif;
-    --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  }
-  body.dark {
-    --sand:#0C0E10; --paper:#14181C; --cut:#1B2026; --ink:#EAEEF2;
-    --a1:#5B9BD9; --a2:#3E7CB8; --clay:#5B9BD9; --fade:#8A93A0;
-    --ink-c:234,238,242; --a1-c:91,155,217; --a2-c:62,124,184;
-    --opt-correct-bg:#16303F; --opt-wrong-bg:#221F1E;
-    --chip-recall-bg:#1C2228; --chip-recall-fg:#7FB4E4;
-    --chip-understand-bg:#20262C; --chip-understand-fg:#8FB8D8;
-    --btn-sub-c:#8A93A0; --on-ink:#0C0E10; --ink-hover:#DDE3E9; --a2-hover:#356FA6;
-  }
+  :root{--sand:#0C0E10;--paper:#14181C;--cut:#1B2026;--ink:#EAEEF2;--a1:#5B9BD9;--a2:#3E7CB8;--copper:var(--a1);--malachite:var(--a2);--clay:#5B9BD9;--fade:#8A93A0;--ink-c:234,238,242;--a1-c:91,155,217;--a2-c:62,124,184;--opt-correct-bg:#16303F;--opt-wrong-bg:#221F1E;--chip-recall-bg:#1C2228;--chip-recall-fg:#7FB4E4;--chip-understand-bg:#20262C;--chip-understand-fg:#8FB8D8;--btn-sub-c:#8A93A0;--on-ink:#0C0E10;--ink-hover:#DDE3E9;--a2-hover:#356FA6;--serif:Georgia, 'Times New Roman', serif;--sans:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;}
+  body.bright{--sand:#F2F5F8;--paper:#FCFDFE;--cut:#FFFFFF;--ink:#17212B;--a1:#2E6FB2;--a2:#255E90;--copper:var(--a1);--malachite:var(--a2);--clay:#2E6FB2;--fade:#6C7681;--ink-c:23,33,43;--a1-c:46,111,178;--a2-c:37,94,144;--opt-correct-bg:#DCEAF7;--opt-wrong-bg:#ECEEF0;--chip-recall-bg:#DEE8F3;--chip-recall-fg:#235C93;--chip-understand-bg:#E4E8ED;--chip-understand-fg:#3A6280;--btn-sub-c:#7A828C;--on-ink:#FFFFFF;--ink-hover:#0E1620;--a2-hover:#1E5080;}
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     min-height: 100vh;
@@ -158,15 +137,17 @@ body:not(.dark) .section-btn, body:not(.dark) .section-btn .section-name, body:n
 </style>
 </head>
 <body>
-<style>#kula-mode-toggle{position:fixed;bottom:1.1rem;right:1.1rem;z-index:9999;display:inline-flex;align-items:center;gap:.45em;padding:.48rem .82rem;border-radius:999px;font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;-webkit-tap-highlight-color:transparent;line-height:1;background:#F4F6F8;color:#525C66;border:1px solid rgba(23,33,43,.15);box-shadow:0 2px 8px rgba(0,0,0,.10);transition:transform .15s ease,box-shadow .15s ease}#kula-mode-toggle:hover{transform:translateY(-1px)}#kula-mode-toggle svg{width:15px;height:15px;display:block;flex:0 0 auto}body.dark #kula-mode-toggle{background:#1B2026;color:#AEB8C4;border-color:rgba(220,232,244,.18)}</style><button id="kula-mode-toggle" type="button" onclick="kulaToggle()" aria-label="Switch between light and dark mode"><span id="kmt-icon"></span><span id="kmt-label"></span></button><script>(function(){var MOON="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z'/></svg>",SUN="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4.2'/><path d='M12 1.6v2M12 20.4v2M3.6 12h-2M22.4 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4'/></svg>",K="kula-theme";function paint(){var d=document.body.classList.contains("dark");var ic=document.getElementById("kmt-icon"),la=document.getElementById("kmt-label");if(ic)ic.innerHTML=d?SUN:MOON;if(la)la.textContent=d?"Light mode":"Dark mode"}window.kulaToggle=function(){document.body.classList.toggle("dark");try{localStorage.setItem(K,document.body.classList.contains("dark")?"dark":"light")}catch(e){}paint()};try{if(localStorage.getItem(K)!=="light")document.body.classList.add("dark")}catch(e){document.body.classList.add("dark")}paint();})();</script>
+<script>/* kula: LMS embed events. "completed" fires once, when the learner reaches the closing screen. "advance" fires from the final button. */
+(function(){var sentCompleted=false;window.kulaEmbed=function(ev){if(ev==="completed"){if(sentCompleted)return;sentCompleted=true;}try{window.parent.postMessage({type:"lms-embed-event",version:"1.0",payload:{event:ev}},"*");}catch(e){}};})();</script>
+<style>#kula-mode-toggle{position:fixed;bottom:1.1rem;right:1.1rem;z-index:9999;display:inline-flex;align-items:center;gap:.45em;padding:.48rem .82rem;border-radius:999px;font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;-webkit-tap-highlight-color:transparent;line-height:1;background:#F4F6F8;color:#525C66;border:1px solid rgba(23,33,43,.15);box-shadow:0 2px 8px rgba(0,0,0,.10);transition:transform .15s ease,box-shadow .15s ease}#kula-mode-toggle:hover{transform:translateY(-1px)}#kula-mode-toggle svg{width:15px;height:15px;display:block;flex:0 0 auto}body:not(.bright) #kula-mode-toggle{background:#1B2026;color:#AEB8C4;border-color:rgba(220,232,244,.18)}</style><button id="kula-mode-toggle" type="button" onclick="kulaToggle()" aria-label="Switch between light and dark mode"><span id="kmt-icon"></span><span id="kmt-label"></span></button><script>(function(){var MOON="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z'/></svg>",SUN="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4.2'/><path d='M12 1.6v2M12 20.4v2M3.6 12h-2M22.4 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4'/></svg>",K="kula-mode";function paint(){var d=!document.body.classList.contains("bright");var ic=document.getElementById("kmt-icon"),la=document.getElementById("kmt-label");if(ic)ic.innerHTML=d?SUN:MOON;if(la)la.textContent=d?"Light mode":"Dark mode"}window.kulaToggle=function(){document.body.classList.toggle("bright");try{localStorage.setItem(K,document.body.classList.contains("bright")?"light":"dark")}catch(e){}paint()};try{if(localStorage.getItem(K)==="light")document.body.classList.add("bright")}catch(e){document.body.classList.add("dark")}paint();})();</script>
 <div class="container">
 
   <!-- MENU -->
   <div id="menu-screen">
     <div class="header-block">
       <div class="eyebrow">Kula Revise &middot; Grade 12 History &middot; The Congo</div>
-      <h1 class="masthead">What Stuck</h1>
-      <div class="sub" id="masthead-sub">After Lesson 5</div>
+      <h1 class="masthead">What You Know Already</h1>
+      <div class="sub" id="masthead-sub">Before Lesson 1</div>
       <div class="rule"></div>
     </div>
     <div class="intro-box">
@@ -187,7 +168,7 @@ body:not(.dark) .section-btn, body:not(.dark) .section-btn .section-name, body:n
       </button>
       <div class="section-list" id="section-list"></div>
     </div>
-    <div class="footer">About 12 minutes for the full set. Have your score from the first check ready.</div>
+    <div class="footer">About 12 minutes for the full set. Answer, see why, move on.</div>
   </div>
 
   <!-- QUIZ -->
@@ -230,14 +211,14 @@ body:not(.dark) .section-btn, body:not(.dark) .section-btn .section-name, body:n
     <div class="breakdown"><div class="breakdown-label">By section</div><div id="breakdown-rows"></div></div>
     <div><div class="review-all-label">Every question</div><div id="review-cards"></div></div>
     <div class="review-actions">
-      <button class="primary-btn" id="kdone-btn"><span class="btn-txt"><span class="btn-title">Finish</span></span><span class="btn-arrow">&rarr;</span></button>
-      <button class="primary-btn" id="restart-btn"><span class="btn-txt"><span class="btn-title">Return to menu</span><span class="btn-sub">Try another section or retake the full test</span></span><span class="btn-arrow">&#8635;</span></button>
+      <button class="primary-btn" id="kdone-btn"><span class="btn-txt"><span class="btn-title">Continue to Lesson 1</span></span><span class="btn-arrow">&rarr;</span></button>
+      <button class="primary-btn" id="restart-btn"><span class="btn-txt"><span class="btn-title">Take it again</span><span class="btn-sub">Try another section or retake the full test</span></span><span class="btn-arrow">&#8635;</span></button>
     </div>
   </div>
 </div>
 
 <script>
-const MODE = "b";
+const MODE = "a";
 const SECTIONS = ["The Colonial Inheritance and the Crisis", "Mobutu Takes Power", "The Economy: Nationalisation and Zairianisation", "Authenticite and One-Party Rule", "The Reckoning and the Verdict"];
 const QUESTIONS = [
   {
@@ -245,270 +226,270 @@ const QUESTIONS = [
     "slot": 1,
     "section": "The Colonial Inheritance and the Crisis",
     "tier": "Recall",
-    "question": "In which year did the Congo win independence, ending more than fifty years of Belgian rule?",
+    "question": "On what date did the Congo become independent from Belgium?",
     "options": [
-      "1960",
-      "1958",
-      "1963",
-      "1965"
+      "30 June 1960",
+      "24 November 1965",
+      "17 January 1961",
+      "1 January 1967"
     ],
     "correct": 0,
-    "explanation": "1960, on 30 June. Belgium had ruled since 1908, so this ended just over fifty years of colonial rule. 1965 is tempting because it's a real turning point, but that's when Mobutu seized power, not when the Congo became free."
+    "explanation": "30 June 1960. The other dates all belong to this topic, which is why they tempt you. 1965 is Mobutu's coup. 1961 is Lumumba's murder. 1967 is the copper takeover. Only 1960 is independence."
   },
   {
     "id": 2,
     "slot": 2,
     "section": "The Colonial Inheritance and the Crisis",
     "tier": "Recall",
-    "question": "Belgian rule treated Congolese people 'like children' with no say in government. Which single word names that attitude?",
+    "question": "Which one word best describes Belgian colonial policy in the Congo?",
     "options": [
-      "A paternalistic attitude",
-      "A nationalist attitude",
-      "A liberal attitude",
-      "A federalist attitude"
+      "Paternalism",
+      "Assimilation",
+      "Federalism",
+      "Segregation"
     ],
     "correct": 0,
-    "explanation": "A paternalistic attitude. The word comes from 'father': the coloniser plays parent, the colonised are cast as children. It's why there were almost no trained Congolese administrators at independence. Nationalism is close to the opposite: the demand to run your own affairs."
+    "explanation": "Paternalism. Treating grown people like children who cannot be trusted with responsibility. It is the root of the whole story. It is why almost nobody had been trained to run the country by 1960. Assimilation was the French approach, not the Belgian one."
   },
   {
     "id": 3,
     "slot": 3,
     "section": "The Colonial Inheritance and the Crisis",
     "tier": "Understand",
-    "question": "General Janssens told the army 'Before Independence = After Independence'. What did that message set off?",
+    "question": "Why did the Force Publique mutiny days after independence in July 1960?",
     "options": [
-      "The mutiny of the army just days after independence",
-      "The peaceful handover of power to Congolese officers",
-      "The decision by Belgium to withdraw all its troops",
-      "The election of Mobutu as the first president"
+      "Because every officer was still Belgian and independence changed nothing for the soldiers",
+      "Because the soldiers wanted the Belgian king to remain as their head of state",
+      "Because Lumumba had ordered them to attack the breakaway province of Katanga",
+      "Because their pay had been cut by the new Congolese government in Leopoldville"
     ],
     "correct": 0,
-    "explanation": "It set off the mutiny on 5 July 1960. The message told the soldiers that independence changed nothing for them, since their officers were all still Belgian. The peaceful-handover option is tempting, but the exact opposite happened: the army broke apart within a week."
+    "explanation": "Every officer was still Belgian. For the soldiers, independence had changed nothing. Their commander wrote 'Before Independence = After Independence', and they mutinied. That collapse let the Belgian troops return, and Katanga broke away days later."
   },
   {
     "id": 4,
     "slot": 4,
     "section": "The Colonial Inheritance and the Crisis",
     "tier": "Understand",
-    "question": "Katanga and Kasai both broke away in 1960. Why was losing Katanga the more dangerous blow?",
+    "question": "Why did Katanga's secession in July 1960 threaten the survival of the whole state?",
     "options": [
-      "It held the copper, and so about half the national revenue",
-      "It held the diamonds, the country's single largest export",
-      "It was where the Belgian army kept its main military base",
-      "It was the home province of the leader Patrice Lumumba"
+      "Because the province supplied about half of the country's revenue",
+      "Because the province held the capital city of Leopoldville",
+      "Because most of the population of the Congo lived in Katanga",
+      "Because Katanga controlled the only route to the sea"
     ],
     "correct": 0,
-    "explanation": "Katanga had the copper, and so about half the country's revenue. The diamonds option is tempting because Kasai's wealth was real, but the diamonds were Kasai's, not Katanga's. Copper in Katanga, diamonds in Kasai: keep the two provinces straight."
+    "explanation": "Katanga held the copper. That gave it about half the country's money. A government that loses half its income cannot pay an army or run an administration. The capital option tempts you. But the capital was Leopoldville, far from Katanga. The money was the danger."
   },
   {
     "id": 5,
     "slot": 5,
     "section": "The Colonial Inheritance and the Crisis",
     "tier": "Apply",
-    "question": "Spot the mistake: 'Because the Congo was handed over peacefully and well prepared, the calm of 1960 to 1965 needed no strong leader.'",
+    "question": "A student writes: 'Mobutu ruled a stable, united Congo from the moment of independence in June 1960.' What is wrong?",
     "options": [
-      "The years 1960 to 1965 were mutiny, secession and murder, and the handover left no administration",
-      "The handover was peaceful and well prepared, but a strong leader was still needed for other reasons",
-      "There is no mistake, since the Congo was well prepared and the early independence years were calm",
-      "The Congo was well prepared for independence, but that independence did not actually arrive until 1965"
+      "Mobutu did not rule in 1960, and those early years were chaos, not calm",
+      "Mobutu ruled in 1960, but the country was united and calm rather than divided then",
+      "Nothing is wrong, since Mobutu did rule a stable, united Congo from June 1960",
+      "Mobutu did become president in 1960, but the Congo never became independent at all"
     ],
     "correct": 0,
-    "explanation": "The sentence is false at both ends. The handover was rushed, not well prepared, and left almost no trained administrators. And 1960 to 1965 was mutiny, secession and murder, not calm. A smooth-sounding sentence like this is exactly the kind worth checking against the facts."
+    "explanation": "Two things are wrong. Mobutu didn't rule in 1960: he stepped in briefly that September, then took power for good only in November 1965. And the early 1960s were the opposite of stable, full of mutiny, secession and murder. The claim reverses the whole story."
   },
   {
     "id": 6,
     "slot": 6,
     "section": "Mobutu Takes Power",
     "tier": "Recall",
-    "question": "Mobutu first stepped in during 1960 but only held power for good after his second coup. In which year was that coup?",
+    "question": "In what year did Mobutu seize power for the second time and keep it?",
     "options": [
-      "November 1965",
-      "March 1963",
-      "January 1967",
-      "October 1970"
+      "1965",
+      "1960",
+      "1967",
+      "1971"
     ],
     "correct": 0,
-    "explanation": "November 1965. The 1960 intervention didn't last; the 1965 coup did, and he then held power for thirty two years. 1967 tempts because it's the year of the new constitution, but the constitution came after the coup, not as it."
+    "explanation": "24 November 1965. His first move was in September 1960, when he suspended Kasavubu and Lumumba. He did not hold power then. 1967 tempts you because a lot happened that year, the new constitution and the MPR. The coup that made him ruler was 1965."
   },
   {
     "id": 7,
     "slot": 7,
     "section": "Mobutu Takes Power",
     "tier": "Recall",
-    "question": "By 1970 the Congo had only one legal party, which every citizen joined at birth. What was it?",
+    "question": "What was the name of the single legal party Mobutu founded in 1967?",
     "options": [
-      "The MPR, the Popular Movement of the Revolution",
-      "The ANC, the African National Congress of South Africa",
-      "The MNC, the Congolese National Movement of Lumumba",
-      "The FNLA, a National Front from neighbouring Angola"
+      "The Popular Movement of the Revolution (MPR)",
+      "The Congolese National Movement of Patrice Lumumba (MNC)",
+      "The National Front for the Liberation of Angola (FNLA)",
+      "The Popular Movement for the Liberation of Angola (MPLA)"
     ],
     "correct": 0,
-    "explanation": "The MPR, founded by Mobutu in 1967. Membership was automatic at birth, so nobody could be a citizen outside the party. The ANC option is tempting if the letters blur together, but the ANC is South African. The MPR is the Congolese one."
+    "explanation": "The MPR, the Popular Movement of the Revolution. By 1970 it was the only legal party, and every citizen was a member from birth. The MNC tempts you because it is also Congolese. That was Lumumba's earlier party, from before Mobutu took over."
   },
   {
     "id": 8,
     "slot": 8,
     "section": "Mobutu Takes Power",
     "tier": "Understand",
-    "question": "Mobutu said democracy was a 'foreign ideology' unsuited to the Congo. What was this argument really for?",
+    "question": "Why did Mobutu argue that 'in our African tradition there are never two chiefs'?",
     "options": [
-      "Making one-man rule look like African tradition instead of dictatorship",
-      "Genuinely describing how every precolonial African society was once governed",
-      "Preparing the whole country for free multi-party elections in the near future",
-      "Explaining why he would step down from power after his promised five years"
+      "To make one-man rule sound like a return to African custom rather than a modern dictatorship",
+      "To explain why the Congo needed a federal system with power shared between its many provinces",
+      "To justify bringing back the Belgian officials who had governed the colony in the years before 1960",
+      "To announce that from now on he would share the country's power equally with President Kasavubu"
     ],
     "correct": 0,
-    "explanation": "It made his grip on power sound like a return to custom. The option that calls it an honest description of the past is tempting. But the African past had councils and limits on chiefs, which Mobutu's state did not. It was a justification, not a description."
+    "explanation": "{opt0}. The claim dressed one-man rule as a return to tradition. Real precolonial societies had chiefs, but they also had councils and customs that kept a chief in check. Mobutu's state had no such limit, so 'tradition' was doing a job here."
   },
   {
     "id": 9,
     "slot": 9,
     "section": "Mobutu Takes Power",
     "tier": "Apply",
-    "question": "Spot the flaw: 'The near-unanimous 1970 vote shows Zairians freely chose Mobutu over rival candidates.'",
+    "question": "A student writes: 'Mobutu's 98 per cent result in the 1970 election proves he was genuinely loved by nearly all Zairians.' What is the problem?",
     "options": [
-      "There were no rival candidates at all; Mobutu stood alone, so no free choice existed",
-      "Zairians did choose freely, but most of them preferred one of the several rival candidates",
-      "There is no flaw in the sentence, since the vote was a genuinely free choice between candidates",
-      "The vote actually took place in 1965, so the only real flaw here is that the year is wrong"
+      "He was the only candidate, so the result shows there was no real choice, not genuine support",
+      "The true result was actually far lower than 98 per cent, so the student has simply misquoted the figure",
+      "There is no problem at all, since a result of 98 per cent really does prove near-total genuine support",
+      "The election in question was actually held in 1965 rather than 1970, so the date is the real mistake"
     ],
     "correct": 0,
-    "explanation": "There were no rivals to choose between. Mobutu stood alone on the ballot, so the idea of a free choice against others is simply false. A one-name vote can produce a huge figure, but it can't show a real choice, because nothing else was on offer."
+    "explanation": "Mobutu was the only name on the ballot, so 98 per cent can't measure real support: there was nothing to choose. Some genuine support probably existed, since order was worth something after the chaos. But a one-name vote can't show it. The claim reads the number backwards."
   },
   {
     "id": 10,
     "slot": 10,
     "section": "The Economy: Nationalisation and Zairianisation",
     "tier": "Recall",
-    "question": "In 1967 the state took over the colonial-era copper company and replaced it with a new state firm. What was the new firm called?",
+    "question": "Which Belgian company, which had financed the Katangese secession, did Mobutu nationalise in 1967?",
     "options": [
-      "The new state company, Gecamines",
-      "The old Union Miniere firm",
-      "The Belgian airline Sabena",
-      "A firm named for Bakajika"
+      "Union Miniere du Haut Katanga (UMHK)",
+      "The state mining company called Gecamines",
+      "The Societe Generale holding company",
+      "The Belgian oil firm called Petrofina"
     ],
     "correct": 0,
-    "explanation": "Gecamines is the state company set up to run the copper after 1967. The firm it replaced was Union Miniere du Haut Katanga, the old private owner. Keep them straight: Union Miniere was taken over, Gecamines took its place."
+    "explanation": "Union Miniere du Haut Katanga, taken over on 1 January 1967. The Gecamines option tempts you. Gecamines is the state company that replaced it, not the firm that was seized."
   },
   {
     "id": 11,
     "slot": 11,
     "section": "The Economy: Nationalisation and Zairianisation",
     "tier": "Recall",
-    "question": "In 1973 about two thousand foreign-owned farms, shops and plantations were seized and given to Zairian individuals. What was this policy called?",
+    "question": "What was Zairianisation, announced on 30 November 1973?",
     "options": [
-      "Zairianisation",
-      "Nationalisation",
-      "Authenticite",
-      "Retrocession"
+      "The seizure of foreign-owned businesses and their transfer to Zairian nationals",
+      "The nationalisation of the copper mining industry by the state",
+      "The renaming of the country and its citizens with African names",
+      "The building of the Inga dam and a ten-year industrial plan"
     ],
     "correct": 0,
-    "explanation": "Zairianisation. The nationalisation option is tempting because both moved ownership, but nationalisation took the copper industry into state hands. Authenticite was the culture campaign, and retrocession the later reversal. Only Zairianisation gave private businesses to individuals."
+    "explanation": "Zairianisation seized about two thousand foreign-owned businesses without paying for them. It handed them to Zairian nationals. The nationalisation option tempts you, because both are seizures. Nationalisation took the copper into state hands. Zairianised businesses went to individuals instead."
   },
   {
     "id": 12,
     "slot": 12,
     "section": "The Economy: Nationalisation and Zairianisation",
     "tier": "Understand",
-    "question": "After Zairianisation, why did so many seized businesses stop producing within months?",
+    "question": "Why did Zairianisation fail to build up Zairian business, despite putting the economy in local hands?",
     "options": [
-      "They were handed to political allies with no experience, who often sold the stock and left",
-      "They were handed to their own workers, who had no supplies or capital to run them",
-      "They were left empty because no Zairian was willing to take them over",
-      "They were taxed so heavily by the state that they could not make a profit"
+      "The businesses went to loyal officials and relatives who often stripped and abandoned them",
+      "The businesses were handed to experienced traders who charged prices that were too high",
+      "The foreign owners refused to leave and kept control of their businesses in secret",
+      "The state kept ownership of the businesses and ran them as government departments"
     ],
     "correct": 0,
-    "explanation": "They went to allies with no idea how to run a farm or a shop, and many stripped and abandoned them. The workers option is tempting, but the workers weren't the recipients. The businesses weren't left empty either: they were taken, then wrecked."
+    "explanation": "The new owners were chosen for loyalty, not skill. Relatives, ministers and army officers. Many sold the stock and walked away, so production fell. Ownership changed hands and nothing was built. Write about that gap and you have the answer."
   },
   {
     "id": 13,
     "slot": 13,
     "section": "The Economy: Nationalisation and Zairianisation",
     "tier": "Apply",
-    "question": "Spot the error: 'Under Zairianisation the seized businesses became state-owned, exactly like the nationalised copper industry.'",
+    "question": "A student writes: 'Nationalisation and Zairianisation were the same policy, since both took the economy into state hands.' What is wrong?",
     "options": [
-      "Zairianised businesses went to private individuals, not the state, unlike the nationalised copper",
-      "The nationalised copper industry went to private individuals, unlike the Zairianised businesses",
-      "There is no error; both ended up owned by the state in the same way",
-      "Neither the copper nor the businesses were ever taken from their foreign owners"
+      "Zairianisation gave businesses to private individuals, not the state, so the two are different",
+      "Nationalisation gave the copper industry to private individuals, not the state",
+      "Nothing is wrong; both policies put the economy into state hands",
+      "Both policies actually left the economy in foreign hands, so neither was state control"
     ],
     "correct": 0,
-    "explanation": "The two policies differ exactly here. The copper industry was nationalised, meaning state-owned. Zairianised businesses went to private individuals, Mobutu's allies and relatives. Calling them state-owned erases the difference the judgement depends on."
+    "explanation": "They weren't the same. Nationalisation took the copper industry into state ownership. Zairianisation handed private businesses to Mobutu's allies. The whole judgement rests on that difference, between the state owning something and a favourite pocketing it."
   },
   {
     "id": 14,
     "slot": 14,
     "section": "Authenticite and One-Party Rule",
     "tier": "Recall",
-    "question": "As part of authenticite in 1971, the Congo was given a new name, also used for its great river. Which name?",
+    "question": "What did Mobutu rename the country in 1971?",
     "options": [
-      "The name Zaire",
-      "The name Zambia",
-      "The name Zanzibar",
-      "The name Katanga"
+      "Zaire",
+      "The Congo Republic",
+      "Katanga",
+      "Kinshasa"
     ],
     "correct": 0,
-    "explanation": "The name Zaire, shared with the river. Zambia and Zanzibar tempt because they sound similar, but Zambia is the neighbouring country and Zanzibar sits off the East African coast. The new name for the Congo was Zaire."
+    "explanation": "The country and the river both became Zaire in 1971. The Kinshasa option is tempting, but Kinshasa was the new name for the capital from 1966, so it's a city, not the country. Zaire was the whole country."
   },
   {
     "id": 15,
     "slot": 15,
     "section": "Authenticite and One-Party Rule",
     "tier": "Recall",
-    "question": "Dropping European first names, replacing suits with the abacost, and Africanising place names were all part of which campaign?",
+    "question": "What was 'authenticite'?",
     "options": [
-      "Authenticite",
-      "Zairianisation",
-      "Nationalisation",
-      "Retrocession"
+      "A campaign to replace European names, dress and custom with African ones",
+      "A plan to nationalise all of the foreign-owned mining companies in Zaire",
+      "The policy of seizing foreign-owned businesses for loyal Zairian nationals",
+      "A building programme to put dams and roads right across the whole country"
     ],
     "correct": 0,
-    "explanation": "Authenticite, the culture and identity campaign. Zairianisation and nationalisation tempt because they're from the same years, but both were economic. Authenticite is the one about names, dress and custom."
+    "explanation": "Authenticite promoted African names, dress such as the abacost, and custom over European ones. The nationalisation option tempts because it's from the same period, but that was the copper policy. Authenticite was about identity, not the economy."
   },
   {
     "id": 16,
     "slot": 16,
     "section": "Authenticite and One-Party Rule",
     "tier": "Understand",
-    "question": "What do the public executions of four former ministers in 1966 show about Mobutu's rule?",
+    "question": "Why did Mobutu have four former ministers publicly executed in Kinshasa in 1966?",
     "options": [
-      "That Mobutu's order rested on fear and the crushing of opposition",
-      "That Mobutu followed the law and respected the independent courts",
-      "That Mobutu was genuinely and widely popular with ordinary people",
-      "That Mobutu shared power with his rivals instead of removing them"
+      "To make everyone see what opposition would now cost",
+      "To satisfy a law requiring executions to be held in public",
+      "To prove that the courts were independent of his government",
+      "To mark the first anniversary of the country's independence"
     ],
     "correct": 0,
-    "explanation": "They show that the order rested on fear. Staging the executions in public was the message: this is what opposing me costs. The 'genuinely popular' option is tempting if you only look at the calm, but public executions are how the calm was produced."
+    "explanation": "The executions were staged in public as a warning: resistance would be answered with force, not argument. It's the clearest early sign that the order Mobutu built rested on fear rather than real support."
   },
   {
     "id": 17,
     "slot": 17,
     "section": "The Reckoning and the Verdict",
     "tier": "Apply",
-    "question": "The essay is bounded 'in the 1960s'. Which piece of evidence is genuinely out of range and would earn no marks?",
+    "question": "A student writes: 'Mobutu's copper policy caused the 1997 collapse of his rule, so it falls inside a question about the 1960s.' What is wrong?",
     "options": [
-      "The rebellion that finally overthrew Mobutu in 1997",
-      "The nationalisation of the copper mining industry in 1967",
-      "The Zairianisation seizures of businesses in 1973",
-      "The retrocession that reversed those seizures by 1976"
+      "1997 is far outside the 1960s the question asks about, so it earns nothing here",
+      "1997 falls inside the 1960s range, so the student is quite right to use it",
+      "The copper policy had nothing whatsoever to do with Mobutu losing his power",
+      "Mobutu did not lose power in 1997; he actually ruled right up until his death"
     ],
     "correct": 0,
-    "explanation": "1997, the year Mobutu was overthrown, sits far outside the 1960s the question asks about. The other three fit. Nationalisation in 1967, Zairianisation in 1973 and retrocession by 1976 are the 1970s outcomes the question allows."
+    "explanation": "1997 is the giveaway. The question is bounded 'in the 1960s', and it does allow the 1970s outcomes of 1960s policies. But 1997, when Mobutu was overthrown, is far outside that range, so it can't be used here however true it is."
   },
   {
     "id": 18,
     "slot": 18,
     "section": "The Reckoning and the Verdict",
     "tier": "Understand",
-    "question": "The 1976 reversal of Zairianisation is powerful evidence because the copper crash cannot account for it. Why not?",
+    "question": "By 1976 the government was inviting the former foreign owners back (retrocession). Why does this matter for the argument?",
     "options": [
-      "Low prices are a reason to keep your assets, not to hand them back to foreigners",
-      "The copper crash happened only in the 1980s, long after the 1976 reversal took place",
-      "The reversal of the seizures actually came before the copper price crash had even begun",
-      "The reversal had nothing to do with the economy at all, and everything to do with politics"
+      "Reversing the policy within three years admits it failed, which the copper crash cannot explain",
+      "It proves the copper price crash was the single real cause of the whole economic collapse in Zaire",
+      "It shows the foreign owners had never truly left the country and had kept control in secret all along",
+      "It shows Zairianisation had succeeded so well that Mobutu was confidently expanding it even further"
     ],
     "correct": 0,
-    "explanation": "If falling prices were the whole story, you'd cling to every asset, not give it back. Reversing the seizures makes sense only if the seizures themselves had failed. The crash was real and came first, in 1974, but it can't explain giving the businesses away."
+    "explanation": "Undoing your own flagship policy within three years is an admission it failed. It's the one fact the copper crash can't explain, because low prices are a reason to hold assets, not give them back. So the failure was in the policy, not just the world market."
   }
 ];
 
@@ -655,6 +636,7 @@ function weakestSection(){
 }
 
 function showReview(){
+  kulaEmbed("completed");
   quiz.classList.add('hidden'); review.classList.remove('hidden');
   const total = state.list.length;
   let correct = 0;
@@ -674,11 +656,11 @@ function showReview(){
     else if(pct>=40){ band='Patchy'; desc='Some of it has stuck and some has not. Your weakest area was ' + weakest + '. Revisit that lesson, then take this again.'; }
     else { band='Start again'; desc='The facts have not settled yet. Go back to the lessons, starting with ' + weakest + ', and work through them again before the exam.'; }
   } else {
-    if(pct>=85){ band='Excellent'; desc='A strong start even before the lessons. Go to Lesson 1 and start turning these facts into an argument.'; }
-    else if(pct>=70){ band='Strong'; desc='You already know a lot of this. Go to Lesson 1, where you learn to use it.'; }
-    else if(pct>=55){ band='Solid'; desc='A decent base to build on. Go to Lesson 1 and start building the argument.'; }
-    else if(pct>=40){ band='Patchy'; desc='A normal starting point before studying a topic. Go to Lesson 1: that is exactly what it is for.'; }
-    else { band='Just starting'; desc='A low score before you have studied a topic is the normal place to begin, not a warning. Go straight to Lesson 1.'; }
+    if(pct>=85){ band='Excellent'; desc='A strong start even before the lessons. Continue to Lesson 1 and start turning these facts into an argument.'; }
+    else if(pct>=70){ band='Strong'; desc='You already know a lot of this. Continue to Lesson 1, where you learn to use it.'; }
+    else if(pct>=55){ band='Solid'; desc='A decent base to build on. Continue to Lesson 1 and start building the argument.'; }
+    else if(pct>=40){ band='Patchy'; desc='A normal starting point before studying a topic. Continue to Lesson 1: that is exactly what it is for.'; }
+    else { band='Just starting'; desc='A low score before you have studied a topic is the normal place to begin, not a warning. Continue to Lesson 1.'; }
   }
   document.getElementById('score-grade').textContent = band;
   document.getElementById('grade-desc').textContent = desc;
@@ -739,7 +721,6 @@ function showReview(){
 
 buildMenu();
 </script>
-<div class="kdone-back hidden" id="kdone-modal"><div class="kdone"><div class="kdone-label">Unit complete</div><p>Congratulations on completing The Congo. Come back here whenever you have a test or exam, or just need to consolidate your work.</p><button class="primary-btn" id="kdone-close"><span class="btn-txt"><span class="btn-title">Done</span></span></button></div></div>
-<script>(function(){document.addEventListener("click",function(e){var m=document.getElementById("kdone-modal");if(!m||!e.target.closest)return;if(e.target.closest("#kdone-btn")){m.classList.remove("hidden");}else if(e.target.closest("#kdone-close")){m.classList.add("hidden");}});})();</script>
+<script>(function(){document.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("#kdone-btn")){kulaEmbed("advance");}});})();</script>
 </body>
 </html>
